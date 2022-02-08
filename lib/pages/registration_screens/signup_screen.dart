@@ -225,7 +225,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       ),
                       height: 50,
                       onPressed: () {
-                        if (_formKey.currentState!.validate()) {}
+                        if (_formKey.currentState!.validate()) {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const LoginScreen()));
+                        }
                       },
                       child: const Text(
                         "Đăng ký",
